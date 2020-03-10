@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNetCoreWebApiLearning.Migrations
 {
     [DbContext(typeof(DataDbContext))]
-    [Migration("20200310020754_initialmigration")]
-    partial class initialmigration
+    [Migration("20200310063325_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,7 +46,7 @@ namespace DotNetCoreWebApiLearning.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Companies");
+                    b.ToTable("Companys");
 
                     b.HasData(
                         new
@@ -93,123 +93,6 @@ namespace DotNetCoreWebApiLearning.Migrations
                             Introduction = "From Beijing",
                             Name = "Baidu",
                             Product = "Software"
-                        },
-                        new
-                        {
-                            Id = new Guid("5efc910b-2f45-43df-afae-620d40542800"),
-                            Country = "USA",
-                            Industry = "Software",
-                            Introduction = "Photoshop?",
-                            Name = "Adobe",
-                            Product = "Software"
-                        },
-                        new
-                        {
-                            Id = new Guid("bbdee09c-089b-4d30-bece-44df59237111"),
-                            Country = "USA",
-                            Industry = "Technology",
-                            Introduction = "Wow",
-                            Name = "SpaceX",
-                            Product = "Rocket"
-                        },
-                        new
-                        {
-                            Id = new Guid("6fb600c1-9011-4fd7-9234-881379716411"),
-                            Country = "Italy",
-                            Industry = "Football",
-                            Introduction = "Football Club",
-                            Name = "AC Milan",
-                            Product = "Football Match"
-                        },
-                        new
-                        {
-                            Id = new Guid("5efc910b-2f45-43df-afae-620d40542811"),
-                            Country = "China",
-                            Industry = "ECommerce",
-                            Introduction = "From Jiangsu",
-                            Name = "Suning",
-                            Product = "Goods"
-                        },
-                        new
-                        {
-                            Id = new Guid("bbdee09c-089b-4d30-bece-44df59237122"),
-                            Country = "USA",
-                            Industry = "Internet",
-                            Introduction = "Blocked",
-                            Name = "Twitter",
-                            Product = "Tweets"
-                        },
-                        new
-                        {
-                            Id = new Guid("6fb600c1-9011-4fd7-9234-881379716422"),
-                            Country = "USA",
-                            Industry = "Internet",
-                            Introduction = "Blocked",
-                            Name = "Youtube",
-                            Product = "Videos"
-                        },
-                        new
-                        {
-                            Id = new Guid("5efc910b-2f45-43df-afae-620d40542822"),
-                            Country = "China",
-                            Industry = "Security",
-                            Introduction = "- -",
-                            Name = "360",
-                            Product = "Security Product"
-                        },
-                        new
-                        {
-                            Id = new Guid("bbdee09c-089b-4d30-bece-44df59237133"),
-                            Country = "China",
-                            Industry = "ECommerce",
-                            Introduction = "Brothers",
-                            Name = "Jingdong",
-                            Product = "Goods"
-                        },
-                        new
-                        {
-                            Id = new Guid("6fb600c1-9011-4fd7-9234-881379716433"),
-                            Country = "China",
-                            Industry = "Internet",
-                            Introduction = "Music?",
-                            Name = "NetEase",
-                            Product = "Songs"
-                        },
-                        new
-                        {
-                            Id = new Guid("5efc910b-2f45-43df-afae-620d40542833"),
-                            Country = "USA",
-                            Industry = "ECommerce",
-                            Introduction = "Store",
-                            Name = "Amazon",
-                            Product = "Books"
-                        },
-                        new
-                        {
-                            Id = new Guid("bbdee09c-089b-4d30-bece-44df59237144"),
-                            Country = "USA",
-                            Industry = "Internet",
-                            Introduction = "Not Exists?",
-                            Name = "AOL",
-                            Product = "Website"
-                        },
-                        new
-                        {
-                            Id = new Guid("6fb600c1-9011-4fd7-9234-881379716444"),
-                            Country = "USA",
-                            Industry = "Internet",
-                            Introduction = "Who?",
-                            Name = "Yahoo",
-                            Product = "Mail"
-                        },
-                        new
-                        {
-                            Id = new Guid("5efc910b-2f45-43df-afae-620d40542844"),
-                            Country = "USA",
-                            Industry = "Internet",
-                            Introduction = "Is it a company?",
-                            Name = "Firefox",
-                            Product = "Browser"
                         });
                 });
 

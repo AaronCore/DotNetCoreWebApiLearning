@@ -26,6 +26,7 @@ namespace DotNetCoreWebApiLearning
                     var dbContext = scope.ServiceProvider.GetService<DataDbContext>();
 
                     dbContext.Database.EnsureDeleted();// 每次运行前删除数据
+                    dbContext.Database.EnsureCreated();
 
                     dbContext.Database.Migrate();
                 }

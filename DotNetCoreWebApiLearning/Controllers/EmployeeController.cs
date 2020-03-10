@@ -8,7 +8,8 @@ using DotNetCoreWebApiLearning.Services;
 
 namespace DotNetCoreWebApiLearning.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
+    [Route("api/employee")]
     [ApiController]
     public class EmployeeController : ControllerBase
     {
@@ -16,7 +17,7 @@ namespace DotNetCoreWebApiLearning.Controllers
 
         public EmployeeController(IEmployeeRepository employeeRepository)
         {
-            _employeeRepository = employeeRepository;
+            _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
         }
     }
 }

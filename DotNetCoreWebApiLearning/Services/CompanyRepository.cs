@@ -24,7 +24,12 @@ namespace DotNetCoreWebApiLearning.Services
                 throw new ArgumentNullException(nameof(companyIds));
             }
 
-            return await _context.Companies.Where(x => companyIds.Contains(x.Id)).OrderBy(x => x.Name).ToListAsync();
+            return await _context.Companys.Where(x => companyIds.Contains(x.Id)).OrderBy(x => x.Name).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Company>> GetCompanysAsync()
+        {
+            return await _context.Companys.OrderBy(x => x.Name).ToListAsync();
         }
 
         public async Task<Company> GetCompanyAsync(Guid companyId)
@@ -34,7 +39,7 @@ namespace DotNetCoreWebApiLearning.Services
                 throw new ArgumentNullException(nameof(companyId));
             }
 
-            return await _context.Companies.FirstOrDefaultAsync(x => x.Id == companyId);
+            return await _context.Companys.FirstOrDefaultAsync(x => x.Id == companyId);
         }
 
         public async Task<bool> CompanyExistsAsync(Guid companyId)
@@ -44,7 +49,7 @@ namespace DotNetCoreWebApiLearning.Services
                 throw new ArgumentNullException(nameof(companyId));
             }
 
-            return await _context.Companies.AnyAsync(x => x.Id == companyId);
+            return await _context.Companys.AnyAsync(x => x.Id == companyId);
         }
 
         public void AddCompany(Company company)
@@ -64,7 +69,7 @@ namespace DotNetCoreWebApiLearning.Services
                 }
             }
 
-            _context.Companies.Add(company);
+            _context.Companys.Add(company);
         }
 
         public void UpdateCompany(Company company)
@@ -79,7 +84,7 @@ namespace DotNetCoreWebApiLearning.Services
                 throw new ArgumentNullException(nameof(company));
             }
 
-            _context.Companies.Remove(company);
+            _context.Companys.Remove(company);
         }
 
         public async Task<bool> SaveAsync()

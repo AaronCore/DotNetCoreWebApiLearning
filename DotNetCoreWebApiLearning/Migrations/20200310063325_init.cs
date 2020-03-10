@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DotNetCoreWebApiLearning.Migrations
 {
-    public partial class initialmigration : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Companies",
+                name: "Companys",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
@@ -21,7 +21,7 @@ namespace DotNetCoreWebApiLearning.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Companies", x => x.Id);
+                    table.PrimaryKey("PK_Companys", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -40,102 +40,37 @@ namespace DotNetCoreWebApiLearning.Migrations
                 {
                     table.PrimaryKey("PK_Employees", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Employees_Companies_CompanyId",
+                        name: "FK_Employees_Companys_CompanyId",
                         column: x => x.CompanyId,
-                        principalTable: "Companies",
+                        principalTable: "Companys",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
-                table: "Companies",
+                table: "Companys",
                 columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
                 values: new object[] { new Guid("bbdee09c-089b-4d30-bece-44df5923716c"), null, "USA", "Software", "Great Company", "Microsoft", "Software" });
 
             migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("bbdee09c-089b-4d30-bece-44df59237144"), null, "USA", "Internet", "Not Exists?", "AOL", "Website" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("5efc910b-2f45-43df-afae-620d40542833"), null, "USA", "ECommerce", "Store", "Amazon", "Books" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("6fb600c1-9011-4fd7-9234-881379716433"), null, "China", "Internet", "Music?", "NetEase", "Songs" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("bbdee09c-089b-4d30-bece-44df59237133"), null, "China", "ECommerce", "Brothers", "Jingdong", "Goods" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("5efc910b-2f45-43df-afae-620d40542822"), null, "China", "Security", "- -", "360", "Security Product" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("6fb600c1-9011-4fd7-9234-881379716422"), null, "USA", "Internet", "Blocked", "Youtube", "Videos" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("bbdee09c-089b-4d30-bece-44df59237122"), null, "USA", "Internet", "Blocked", "Twitter", "Tweets" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("5efc910b-2f45-43df-afae-620d40542811"), null, "China", "ECommerce", "From Jiangsu", "Suning", "Goods" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("6fb600c1-9011-4fd7-9234-881379716411"), null, "Italy", "Football", "Football Club", "AC Milan", "Football Match" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("bbdee09c-089b-4d30-bece-44df59237111"), null, "USA", "Technology", "Wow", "SpaceX", "Rocket" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("5efc910b-2f45-43df-afae-620d40542800"), null, "USA", "Software", "Photoshop?", "Adobe", "Software" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("6fb600c1-9011-4fd7-9234-881379716400"), null, "China", "Internet", "From Beijing", "Baidu", "Software" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("bbdee09c-089b-4d30-bece-44df59237100"), null, "China", "ECommerce", "From Shenzhen", "Tencent", "Software" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("5efc910b-2f45-43df-afae-620d40542853"), null, "China", "Internet", "Fubao Company", "Alipapa", "Software" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
+                table: "Companys",
                 columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
                 values: new object[] { new Guid("6fb600c1-9011-4fd7-9234-881379716440"), null, "USA", "Internet", "Don't be evil", "Google", "Software" });
 
             migrationBuilder.InsertData(
-                table: "Companies",
+                table: "Companys",
                 columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("6fb600c1-9011-4fd7-9234-881379716444"), null, "USA", "Internet", "Who?", "Yahoo", "Mail" });
+                values: new object[] { new Guid("5efc910b-2f45-43df-afae-620d40542853"), null, "China", "Internet", "Fubao Company", "Alipapa", "Software" });
 
             migrationBuilder.InsertData(
-                table: "Companies",
+                table: "Companys",
                 columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
-                values: new object[] { new Guid("5efc910b-2f45-43df-afae-620d40542844"), null, "USA", "Internet", "Is it a company?", "Firefox", "Browser" });
+                values: new object[] { new Guid("bbdee09c-089b-4d30-bece-44df59237100"), null, "China", "ECommerce", "From Shenzhen", "Tencent", "Software" });
+
+            migrationBuilder.InsertData(
+                table: "Companys",
+                columns: new[] { "Id", "BankruptTime", "Country", "Industry", "Introduction", "Name", "Product" },
+                values: new object[] { new Guid("6fb600c1-9011-4fd7-9234-881379716400"), null, "China", "Internet", "From Beijing", "Baidu", "Software" });
 
             migrationBuilder.InsertData(
                 table: "Employees",
@@ -179,7 +114,7 @@ namespace DotNetCoreWebApiLearning.Migrations
                 name: "Employees");
 
             migrationBuilder.DropTable(
-                name: "Companies");
+                name: "Companys");
         }
     }
 }

@@ -14,7 +14,7 @@ namespace DotNetCoreWebApiLearning.Data
 
         }
 
-        public DbSet<Company> Companies { get; set; }
+        public DbSet<Company> Companys { get; set; }
         public DbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -74,123 +74,6 @@ namespace DotNetCoreWebApiLearning.Data
                     Country = "China",
                     Industry = "Internet",
                     Product = "Software"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("5efc910b-2f45-43df-afae-620d40542800"),
-                    Name = "Adobe",
-                    Introduction = "Photoshop?",
-                    Country = "USA",
-                    Industry = "Software",
-                    Product = "Software"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("bbdee09c-089b-4d30-bece-44df59237111"),
-                    Name = "SpaceX",
-                    Introduction = "Wow",
-                    Country = "USA",
-                    Industry = "Technology",
-                    Product = "Rocket"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("6fb600c1-9011-4fd7-9234-881379716411"),
-                    Name = "AC Milan",
-                    Introduction = "Football Club",
-                    Country = "Italy",
-                    Industry = "Football",
-                    Product = "Football Match"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("5efc910b-2f45-43df-afae-620d40542811"),
-                    Name = "Suning",
-                    Introduction = "From Jiangsu",
-                    Country = "China",
-                    Industry = "ECommerce",
-                    Product = "Goods"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("bbdee09c-089b-4d30-bece-44df59237122"),
-                    Name = "Twitter",
-                    Introduction = "Blocked",
-                    Country = "USA",
-                    Industry = "Internet",
-                    Product = "Tweets"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("6fb600c1-9011-4fd7-9234-881379716422"),
-                    Name = "Youtube",
-                    Introduction = "Blocked",
-                    Country = "USA",
-                    Industry = "Internet",
-                    Product = "Videos"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("5efc910b-2f45-43df-afae-620d40542822"),
-                    Name = "360",
-                    Introduction = "- -",
-                    Country = "China",
-                    Industry = "Security",
-                    Product = "Security Product"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("bbdee09c-089b-4d30-bece-44df59237133"),
-                    Name = "Jingdong",
-                    Introduction = "Brothers",
-                    Country = "China",
-                    Industry = "ECommerce",
-                    Product = "Goods"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("6fb600c1-9011-4fd7-9234-881379716433"),
-                    Name = "NetEase",
-                    Introduction = "Music?",
-                    Country = "China",
-                    Industry = "Internet",
-                    Product = "Songs"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("5efc910b-2f45-43df-afae-620d40542833"),
-                    Name = "Amazon",
-                    Introduction = "Store",
-                    Country = "USA",
-                    Industry = "ECommerce",
-                    Product = "Books"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("bbdee09c-089b-4d30-bece-44df59237144"),
-                    Name = "AOL",
-                    Introduction = "Not Exists?",
-                    Country = "USA",
-                    Industry = "Internet",
-                    Product = "Website"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("6fb600c1-9011-4fd7-9234-881379716444"),
-                    Name = "Yahoo",
-                    Introduction = "Who?",
-                    Country = "USA",
-                    Industry = "Internet",
-                    Product = "Mail"
-                },
-                new Company
-                {
-                    Id = Guid.Parse("5efc910b-2f45-43df-afae-620d40542844"),
-                    Name = "Firefox",
-                    Introduction = "Is it a company?",
-                    Country = "USA",
-                    Industry = "Internet",
-                    Product = "Browser"
                 });
 
             modelBuilder.Entity<Employee>().HasData(

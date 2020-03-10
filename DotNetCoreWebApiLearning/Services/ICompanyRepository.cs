@@ -9,6 +9,7 @@ namespace DotNetCoreWebApiLearning.Services
     public interface ICompanyRepository : ISave
     {
         Task<IEnumerable<Company>> GetCompanysAsync(IEnumerable<Guid> companyIds);
+        Task<IEnumerable<Company>> GetCompanysAsync();
         Task<Company> GetCompanyAsync(Guid companyId);
         Task<bool> CompanyExistsAsync(Guid companyId);
         void AddCompany(Company company);
