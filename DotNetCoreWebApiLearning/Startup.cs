@@ -10,6 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using DotNetCoreWebApiLearning.Services;
+using DotNetCoreWebApiLearning.Data;
 
 namespace DotNetCoreWebApiLearning
 {
@@ -26,6 +30,17 @@ namespace DotNetCoreWebApiLearning
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddScoped<ICompanyRepository, CompanyRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+            services.AddDbContext<DataDbContext>(option =>
+            {
+                option.UseSqlite("Data Source=DotNetCoreWebApiLearning.db");
+            });
+
+            // AutoMapper”≥…‰
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
