@@ -26,6 +26,10 @@ namespace DotNetCoreWebApiLearning.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// 获取所有公司
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CompanyDto>>> GetCompanys()
         {

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetCoreWebApiLearning</name>
+    </assembly>
+    <members>
+        <member name="M:DotNetCoreWebApiLearning.Controllers.CompanyController.GetCompanys">
+            <summary>
+            获取所有公司
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.DtoModel.CompanyDto.CompanyName">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.DtoModel.CompanyDto.Country">
+            <summary>
+            所在国家
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.DtoModel.CompanyDto.Industry">
+            <summary>
+            所在行业
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.DtoModel.CompanyDto.Product">
+            <summary>
+            公司产品
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.DtoModel.CompanyDto.Introduction">
+            <summary>
+            公司简介
+            </summary>
+        </member>
+        <member name="T:DotNetCoreWebApiLearning.Entitys.Company">
+            <summary>
+            公司实体
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.Name">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.Country">
+            <summary>
+            所在国家
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.Industry">
+            <summary>
+            所在行业
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.Product">
+            <summary>
+            公司产品
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.Introduction">
+            <summary>
+            公司简介
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.BankruptTime">
+            <summary>
+            注销日期
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Company.Employees">
+            <summary>
+            公司员工
+            </summary>
+        </member>
+        <member name="T:DotNetCoreWebApiLearning.Entitys.Employee">
+            <summary>
+            员工实体
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.CompanyId">
+            <summary>
+            公司Key
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.EmployeeNo">
+            <summary>
+            员工编号
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.FirstName">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.LastName">
+            <summary>
+            姓氏
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.DateOfBirth">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:DotNetCoreWebApiLearning.Entitys.Employee.Company">
+            <summary>
+            所属公司
+            </summary>
+        </member>
+    </members>
+</doc>
